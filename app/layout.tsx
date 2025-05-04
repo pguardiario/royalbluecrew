@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Toaster } from 'react-hot-toast'
 import './globals.css'
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 export const metadata: Metadata = {
   title: 'Royal Blue Crew | Professional Cleaning Services in Manhattan, NYC',
@@ -15,6 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <GoogleAnalytics gaId={`GA-${process.env.GA_ID}`} />
       <body>
         {children}
         <Toaster/>

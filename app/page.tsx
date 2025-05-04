@@ -506,7 +506,7 @@ export default function Home() {
                 </li>
                 <li className="flex items-start gap-2">
                   <Mail className="h-5 w-5 text-royal-blue mt-0.5" />
-                  <span className="text-sm text-gray-500">info@royalbluecrew.com</span>
+                  <a href="mailto:info@royalbluecrew.com" className="text-sm text-gray-500">info@royalbluecrew.com</a>
                 </li>
                 <li className="flex items-start gap-2">
                   <MapPin className="h-5 w-5 text-royal-blue mt-0.5" />
