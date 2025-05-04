@@ -1,5 +1,6 @@
 import Link from "next/link"
 import Image from "next/image"
+import Contact from "@/components/Contact"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Check, MapPin, Phone, Mail, Clock, Star, ArrowRight, Sparkles, Shield, ThumbsUp } from "lucide-react"
@@ -10,13 +11,8 @@ export default function Home() {
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container flex h-16 items-center justify-between">
           <div className="flex items-center gap-2">
-            <Image
-              src="/placeholder.svg?height=32&width=32"
-              alt="Royal Blue Crew Logo"
-              width={32}
-              height={32}
-              className="rounded"
-            />
+            <img src="/logo1.png" alt="Royal Blue Crew Logo" className="w-12 rounded"/>
+
             <span className="text-xl font-bold text-royal-blue">Royal Blue Crew</span>
           </div>
           <nav className="hidden md:flex gap-6">
@@ -313,109 +309,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <Card>
-                <CardHeader>
-                  <CardTitle>Request a Quote</CardTitle>
-                  <CardDescription>
-                    Fill out the form below and we'll get back to you as soon as possible.
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <form className="grid gap-4">
-                    <div className="grid grid-cols-2 gap-4">
-                      <div className="space-y-2">
-                        <label
-                          htmlFor="first-name"
-                          className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                        >
-                          First name
-                        </label>
-                        <input
-                          id="first-name"
-                          className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                          placeholder="John"
-                        />
-                      </div>
-                      <div className="space-y-2">
-                        <label
-                          htmlFor="last-name"
-                          className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                        >
-                          Last name
-                        </label>
-                        <input
-                          id="last-name"
-                          className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                          placeholder="Doe"
-                        />
-                      </div>
-                    </div>
-                    <div className="space-y-2">
-                      <label
-                        htmlFor="email"
-                        className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                      >
-                        Email
-                      </label>
-                      <input
-                        id="email"
-                        type="email"
-                        className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                        placeholder="john.doe@example.com"
-                      />
-                    </div>
-                    <div className="space-y-2">
-                      <label
-                        htmlFor="phone"
-                        className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                      >
-                        Phone
-                      </label>
-                      <input
-                        id="phone"
-                        type="tel"
-                        className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                        placeholder="(555) 123-4567"
-                      />
-                    </div>
-                    <div className="space-y-2">
-                      <label
-                        htmlFor="service"
-                        className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                      >
-                        Service Type
-                      </label>
-                      <select
-                        id="service"
-                        className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                      >
-                        <option value="">Select a service</option>
-                        <option value="residential">Residential Cleaning</option>
-                        <option value="commercial">Commercial Cleaning</option>
-                        <option value="deep">Deep Cleaning</option>
-                        <option value="move">Move In/Out Cleaning</option>
-                        <option value="other">Other</option>
-                      </select>
-                    </div>
-                    <div className="space-y-2">
-                      <label
-                        htmlFor="message"
-                        className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                      >
-                        Message
-                      </label>
-                      <textarea
-                        id="message"
-                        className="flex min-h-[100px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                        placeholder="Tell us about your cleaning needs..."
-                      ></textarea>
-                    </div>
-                    <Button type="submit" className="w-full">
-                      Submit Request
-                    </Button>
-                  </form>
-                </CardContent>
-              </Card>
+              <Contact/>
             </div>
           </div>
         </section>
@@ -480,13 +374,7 @@ export default function Home() {
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
             <div className="space-y-4">
               <div className="flex items-center gap-2">
-                <Image
-                  src="/placeholder.svg?height=32&width=32"
-                  alt="Royal Blue Crew Logo"
-                  width={32}
-                  height={32}
-                  className="rounded"
-                />
+                <img src="/logo1.png" alt="Royal Blue Crew Logo" className="w-12 rounded"/>
                 <span className="text-xl font-bold text-royal-blue">Royal Blue Crew</span>
               </div>
               <p className="text-sm text-gray-500">

@@ -1,10 +1,11 @@
 import type { Metadata } from 'next'
+import { Toaster } from 'react-hot-toast'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'v0 App',
-  description: 'Created with v0',
-  generator: 'v0.dev',
+  title: 'Royal Blue Crew | Professional Cleaning Services in Manhattan, NYC',
+  description: 'Top-rated residential and commercial cleaning services in Manhattan. Royal Blue Crew offers reliable, eco-friendly cleaning for homes and offices. Get a free quote today!',
+
 }
 
 export default function RootLayout({
@@ -14,7 +15,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        {children}
+        <Toaster/>
+      </body>
     </html>
   )
 }
