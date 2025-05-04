@@ -16,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <GoogleAnalytics gaId={`GA-${process.env.GA_ID}`} />
+      <GoogleAnalytics gaId={`G-${process.env.GA_ID}`} />
       <body>
         {children}
         <Toaster/>
